@@ -9,3 +9,6 @@ EMHIRES is the first publically available European solar power generation datase
 
 [Mnist](https://www.kaggle.com/oddrationale/mnist-in-csv)
 The MNIST database (Modified National Institute of Standards and Technology database) is a large database of handwritten digits that is commonly used for training various image processing systems. To test the performance of the baseline models and save time, we create abnormal samples in the Mnist dataset and use it to train our baseline networks.
+
+[EGG](https://archive.physionet.org/physiobank/database/adfecgdb/)
+The original dataset for "ECG5000" is a 20-hour long ECG downloaded from Physionet. It contains 5,000 Time Series examples (obtained with ECG) with 140 timesteps. Each sequence corresponds to a single heartbeat from a single patient with congestive heart failure.
