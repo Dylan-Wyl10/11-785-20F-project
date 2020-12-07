@@ -13,9 +13,17 @@ import torch.nn.functional as F
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class TransformerAutoencoder(nn.Module):
-    def __init__(self, seq_len, n_features, embedding_dim=64):
+    def __init__(self, n_features, embedding_dim=64):
         super(TransformerAutoencoder, self).__init__()
-        self.trans = nn.Transformer(nheads=5, d_model=n_features)
-        
+        self.emb = nn.Linear(n_features, embedding_dim)
+        self.trans = nn.Transformer( d_model=embedding_dim)
+        self.out = nn.Linear(embedding_dim, n_features)
     def forward(self, x):
-        return self.trans(x,x)
+        #print(x.shape)
+        x= x.unsqueeze(0)
+        x = self.emb(x)
+        x = x.permute(1,0,2)
+        x = self.out(self.trans(x,x))
+        x=x.squeeze(1)
+        #print(x.shape)
+        return x
