@@ -45,10 +45,10 @@ def data_preprocess(df):
     return train_df, val_df, test_df
 
 def create_dataset(df):
-  sequences = df.astype(np.float32).to_numpy().tolist()
+    sequences = df.astype(np.float32).to_numpy().tolist()
 
-  dataset = [torch.tensor(s).unsqueeze(1).float() for s in sequences]
+    dataset = [torch.tensor(s).unsqueeze(1).float() for s in sequences]
 
-  n_seq, seq_len, n_features = torch.stack(dataset).shape
+    n_seq, seq_len, n_features = torch.stack(dataset).shape
 
-  return dataset, seq_len, n_features
+    return dataset, seq_len, n_features
