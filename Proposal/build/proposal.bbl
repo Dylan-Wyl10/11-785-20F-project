@@ -1,0 +1,50 @@
+\begin{thebibliography}{1}
+
+\bibitem{AuthorJM}
+J.~{Pereira} and M.~{Silveira}.
+\newblock Unsupervised anomaly detection in energy time series data using
+  variational recurrent autoencoders with attention.
+\newblock In {\em 2018 17th IEEE International Conference on Machine Learning
+  and Applications (ICMLA)}, pages 1275--1282, 2018.
+
+\bibitem{AuthorSI}
+S.I. Chang and E.S. Ho.
+\newblock A two-stage neural network approach for process variance change
+  detection and classification.
+\newblock {\em Int. J. Prod. Res}, 37(7):1581–1599, 1999.
+
+\bibitem{AuthorPotes}
+Cristhian Potes and et~al.
+\newblock Ensemble of feature-based and deep learning-based classifiers for
+  detection of abnormal heart sounds.
+\newblock {\em 2016 Computing in Cardiology Conference (CinC), IEEE}, 2016.
+
+\bibitem{AuthorDu}
+Min Du and et~al.
+\newblock Deeplog: Anomaly detection and diagnosis from system logs through
+  deep learning.
+\newblock {\em Proceedings of the 2017 ACM SIGSAC Conference on Computer and
+  Communications Security}, 2017.
+
+\bibitem{AuthorRZ}
+R.~Zhao, R.~Yan, Z.~Chen, K.~Mao, P.~Wang, and R.X. Gao.
+\newblock Deep learning and its applications to machine health monitoring: a
+  survey.
+\newblock {\em arXiv preprint arXiv}, 1612, 2016.
+
+\bibitem{AuthorKa}
+Herman Kamper and et~al.
+\newblock Unsupervised neural network-based feature extraction using weak
+  top-down constraints.
+\newblock {\em International Conference on Acoustics, Speech and Signal
+  Processing (ICASSP), IEEE}, 2015.
+
+\bibitem{NIPS2017_7181}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N Gomez, \L~ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In I.~Guyon, U.~V. Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
+  S.~Vishwanathan, and R.~Garnett, editors, {\em Advances in Neural Information
+  Processing Systems 30}, pages 5998--6008. Curran Associates, Inc., 2017.
+
+\end{thebibliography}
