@@ -1,0 +1,21 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Literature Review}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Abnormally detection}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Auto-encoder \(AE\) and Auto-decoder \(AD\) network}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Dataset}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{MNIST}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{EMHIRES dataset}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Evaluation Matrix}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Confusion Matrix}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Experimental Baseline}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{MLP-Baseline}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{LSTM-Baseline}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.3}{Assumptions}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.4}{Caveats}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.5}{Conclusion}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Current experiments}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Assumptions}{section.6}% 17
+\BOOKMARK [1][-]{section.7}{Future Plan}{}% 18
+\BOOKMARK [2][-]{subsection.7.1}{Planned Experiment}{section.7}% 19
+\BOOKMARK [2][-]{subsection.7.2}{Work Division}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.3}{Timeline}{section.7}% 21
