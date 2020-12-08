@@ -5,7 +5,7 @@ import seaborn as sns
 from pylab import rcParams
 import matplotlib.pyplot as plt
 from matplotlib import rc
-from train_test import predict
+from train_test import predict_lstm
 
 def plot_time_series_class(data, class_name, ax, n_steps=10):
     time_series_df = pd.DataFrame(data)
@@ -47,7 +47,7 @@ def plot_time_series_data(df, class_names):
     fig.tight_layout();
 
 def plot_prediction(data, model, criterion, title, ax):
-    predictions, pred_losses = predict(model, [data], criterion)
+    predictions, pred_losses = predict_lstm(model, [data], criterion)
 
     ax.plot(data, label='true')
     ax.plot(predictions[0], label='reconstructed')

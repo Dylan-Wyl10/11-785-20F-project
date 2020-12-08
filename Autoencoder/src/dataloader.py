@@ -1,14 +1,14 @@
 import torch
+from torch import nn, optim 
+import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
 
 import copy
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-
-from torch import nn, optim 
-
-import torch.nn.functional as F
 from arff2pandas import a2p
+
 
 def load_data():
     with open('../data/ECG5000_TRAIN.arff') as f:
@@ -52,3 +52,16 @@ def create_dataset(df):
     n_seq, seq_len, n_features = torch.stack(dataset).shape
 
     return dataset, seq_len, n_features
+
+class EGG_Dataset(Dataset):
+    def __init__(self, df):
+        self.sequences = df.astype(np.float32).to_numpy()
+        self.sequences = torch.tensor(self.sequences)
+        self.sequences = self.sequences.unsqueeze(-1)
+
+    def __len__(self):
+        return self.sequences.shape[0]
+
+    def __getitem__(self, index):
+        return self.sequences[index, :, :]
+
