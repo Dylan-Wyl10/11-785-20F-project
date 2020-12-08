@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from torch import nn, optim
+from torch import nn, optim 
 
 import torch.nn.functional as F
 from arff2pandas import a2p
