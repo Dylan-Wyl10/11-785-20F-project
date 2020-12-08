@@ -16,7 +16,8 @@ The original dataset for "ECG5000" is a 20-hour long ECG downloaded from Physion
 ## Model Description 
 [Attention-based LSTM]
 This is an auto-encoder model, the basic architecture is a two-layer LSTM encoder and two-layer LSTM decoder. We add attention layer before the LSTM encoder. 
+Compared with normal LSTM model, the attention-based LSTM performs better with less detection erros. 
 
 [Transformer Model]
-This is a transformer model, the basic architecture is 
+This is a transformer model, the basic architecture is:  Embedding+Transformer+Linear. 
 
