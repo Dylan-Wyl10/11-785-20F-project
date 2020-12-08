@@ -117,7 +117,7 @@ class Encoder_lstm(nn.Module):
         x, (_, _) = self.rnn1(x)
         x, (hidden_n, _) = self.rnn2(x)
 
-        return hidden_n.reshape((self.n_features, self.embedding_dim))
+        return hidden_n.reshape((self.n_features, self.embedding_dim)) #1*128 feature size
 
 class Decoder_lstm(nn.Module):
 
@@ -144,14 +144,14 @@ class Decoder_lstm(nn.Module):
         self.output_layer = nn.Linear(self.hidden_dim, n_features)
 
     def forward(self, x):
-        x = x.repeat(self.seq_len, self.n_features)
+        x = x.repeat(self.seq_len, self.n_features) #1*128 -> 140*128
         x = x.reshape((self.n_features, self.seq_len, self.input_dim))
 
         x, (hidden_n, cell_n) = self.rnn1(x)
         x, (hidden_n, cell_n) = self.rnn2(x)
         x = x.reshape((self.seq_len, self.hidden_dim))
 
-        return self.output_layer(x)
+        return self.output_layer(x) # size:1*140
 
 class RecurrentAutoencoder(nn.Module):
 
