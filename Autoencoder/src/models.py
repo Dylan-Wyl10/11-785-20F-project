@@ -79,7 +79,7 @@ class Decoder_attention(nn.Module):
             inp_2 = hidden_states[0][0]
             hidden_states[1] = self.lstm2(inp_2, hidden_states[1])
             
-            output = hidden_states[1][0]
+            output = hidden_states[1][0] # query
             if (self.isAttended == True):
                 context, attention = self.attention(output, keys, values)
                 prediction = self.output_layer(torch.cat([output, context], dim=1))
