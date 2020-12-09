@@ -98,17 +98,17 @@ class Encoder_lstm(nn.Module):
         self.embedding_dim, self.hidden_dim = embedding_dim, 2 * embedding_dim
 
         self.rnn1 = nn.LSTM(
-            input_size=n_features,
-            hidden_size=self.hidden_dim,
-            num_layers=1,
-            batch_first=True
+            input_size=n_features, #1
+            hidden_size=self.hidden_dim, #128
+            num_layers=1, #1
+            batch_first=True # LSTM(inputsize=1, hiddensize=128, layers=1)
         )
 
         self.rnn2 = nn.LSTM(
-            input_size=self.hidden_dim,
-            hidden_size=embedding_dim,
-            num_layers=1,
-            batch_first=True
+            input_size=self.hidden_dim, #128
+            hidden_size=embedding_dim, #64
+            num_layers=1, #1
+            batch_first=True #LSTM(inputsize=128, hiddensize=64, layers=1)
         )
 
     def forward(self, x):
@@ -128,15 +128,15 @@ class Decoder_lstm(nn.Module):
         self.hidden_dim, self.n_features = 2 * input_dim, n_features
 
         self.rnn1 = nn.LSTM(
-            input_size=input_dim,
-            hidden_size=input_dim,
+            input_size=input_dim, # 64
+            hidden_size=input_dim, # 64
             num_layers=1,
-            batch_first=True
+            batch_first=True # LSTM(64, 64, 1)
         )
 
         self.rnn2 = nn.LSTM(
-            input_size=input_dim,
-            hidden_size=self.hidden_dim,
+            input_size=input_dim, # 64
+            hidden_size=self.hidden_dim, #64
             num_layers=1,
             batch_first=True
         )
@@ -163,6 +163,8 @@ class RecurrentAutoencoder(nn.Module):
 
     def forward(self, x):
         x = self.encoder(x)
+        print("what is x")
+        print(x.shape)
         x = self.decoder(x)
 
         return x
