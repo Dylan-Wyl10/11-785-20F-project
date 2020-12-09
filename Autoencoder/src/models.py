@@ -136,12 +136,12 @@ class Decoder_lstm(nn.Module):
 
         self.rnn2 = nn.LSTM(
             input_size=input_dim, # 64
-            hidden_size=self.hidden_dim, #64
+            hidden_size=self.hidden_dim, #128
             num_layers=1,
-            batch_first=True
+            batch_first=True #LSTM(64, 128, 1)
         )
 
-        self.output_layer = nn.Linear(self.hidden_dim, n_features)
+        self.output_layer = nn.Linear(self.hidden_dim, n_features) # Linear(128, 1)
 
     def forward(self, x):
         x = x.repeat(self.seq_len, self.n_features)
